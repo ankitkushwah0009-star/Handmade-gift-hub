@@ -1,265 +1,166 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
-<title>Priya Enterprises</title>
-
-<style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priya Enterprises</title><style>
 
 body{
 font-family:Arial;
-background:#f5f5f5;
-text-align:center;
 margin:0;
+background:#f4f4f4;
 }
 
 header{
-background:#ff4d6d;
+background:#0f9d58;
 color:white;
+text-align:center;
 padding:15px;
 }
 
 .info{
+text-align:center;
+padding:10px;
 background:white;
-padding:15px;
 }
 
-.gallery{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
 gap:20px;
 padding:20px;
 }
 
-.card{
+.product{
 background:white;
 padding:10px;
-width:220px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
+box-shadow:0 0 8px rgba(0,0,0,0.1);
+text-align:center;
 }
 
-.card img{
+.product img{
 width:100%;
-border-radius:10px;
-margin-top:5px;
+height:200px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:5px;
 }
 
 .price{
-color:green;
 font-weight:bold;
+margin:8px 0;
 }
 
 .btn{
-display:inline-block;
 background:#25D366;
 color:white;
-padding:8px 15px;
-text-decoration:none;
+padding:8px 12px;
 border-radius:5px;
-margin-top:5px;
-border:none;
+text-decoration:none;
+display:inline-block;
 }
 
-.payment{
-background:white;
-padding:20px;
-margin:20px;
-}
-
-</style>
-
-<script>
-
-function order(product){
-
-var message="Hello, mujhe "+product+" order karna hai";
-
-var url="https://wa.me/918923122302?text="+encodeURIComponent(message);
-
-window.open(url);
-
-}
-
-</script>
-
-</head>
-
-<body>
-
-<header>
-<h1>Priya Enterprises</h1>
-</header>
-
-<div class="info">
-
-<p><b>Owner:</b> Priya , Ankit And Ambika</p>
-
-<p><b>Mobile:</b> 8923122302 , 9758025423 , 7599973339</p>
-
-<p><b>Address:</b> shop no 129 bhole baba homes near G R hospital samshabad road agra pin 282001</p>
-
-</div>
-
-<h2>Our Products</h2>
-
-<div class="gallery">
-
-
-<div class="card">
-<img src="1.jpeg">
-<h3>Flower stick</h3>
-<p class="price">₹99 per piece</p>
-<button class="btn" onclick="order('Flower stick')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="flower 7.jpeg">
-<img src="flower 8.jpeg">
-<img src="five flower 2.jpeg">
-<img src="five flower.jpeg">
+</style></head><body><header>
+<h2>Priya Enterprises</h2>
+</header><div class="info">
+Owner: Priya , Ankit , Ambika<br>
+Mobile: 8923122302 , 9758025423 , 7599973339<br>
+Address: Shop no 129 Bhole Baba Homes Near G R Hospital Samshabad Road Agra 282001<br>
+UPI: 7055487441-3@ibl
+</div><div class="products"><div class="product">
+<img src="images/1.jpeg">
+<h3>Flower Stick</h3>
+<div class="price">₹99</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Flower Stick">Order</a>
+</div><div class="product">
+<img src="images/flower 7.jpeg">
+<img src="images/flower 8.jpeg">
+<img src="images/five flower 2.jpeg">
+<img src="images/five flower.jpeg">
 <h3>Thai Rose</h3>
-<p class="price">₹249</p>
-<button class="btn" onclick="order('Thai Rose')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="five roses pair.jpeg">
-<img src="flower pair.jpeg">
-<img src="seven roses pair.jpeg">
-<h3>Small Rose pair</h3>
-<p class="price">₹1199</p>
-<button class="btn" onclick="order('Small Rose pair')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="hen 1.jpeg">
-<img src="hen 2.jpeg">
-<img src="hen3.jpeg">
+<div class="price">₹249</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Thai Rose">Order</a>
+</div><div class="product">
+<img src="images/flower roses pair.jpeg">
+<img src="images/flower pair.jpeg">
+<img src="images/seven roses pair.jpeg">
+<h3>Small Rose Pair</h3>
+<div class="price">₹1199</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Small Rose Pair">Order</a>
+</div><div class="product">
+<img src="images/hen 1.jpeg">
+<img src="images/hen 2.jpeg">
+<img src="images/hen 3.jpeg">
 <h3>Hen</h3>
-<p class="price">₹149</p>
-<button class="btn" onclick="order('Hen')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="sunflower 1.jpeg">
-<img src="sunflower 5 pair.jpeg">
-<img src="sunflower.jpeg">
-<h3>Sun flower</h3>
-<p class="price">₹199</p>
-<button class="btn" onclick="order('Sun flower')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="turtiol.jpeg">
+<div class="price">₹149</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Hen">Order</a>
+</div><div class="product">
+<img src="images/sunflower 1.jpeg">
+<img src="images/sunflower 5 pair.jpeg">
+<img src="images/sunflower.jpeg">
+<h3>Sun Flower</h3>
+<div class="price">₹199</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Sunflower">Order</a>
+</div><div class="product">
+<img src="images/turtiol.jpeg">
 <h3>Turtiol</h3>
-<p class="price">₹249</p>
-<button class="btn" onclick="order('Turtiol')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="lily.jpeg">
+<div class="price">₹249</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Turtiol">Order</a>
+</div><div class="product">
+<img src="images/lily.jpeg">
 <h3>Lilly</h3>
-<p class="price">₹149</p>
-<button class="btn" onclick="order('Lilly')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="flower 9.jpeg">
+<div class="price">₹149</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Lilly">Order</a>
+</div><div class="product">
+<img src="images/flower 9.jpeg">
 <h3>Rose</h3>
-<p class="price">₹299</p>
-<button class="btn" onclick="order('Rose')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="rubber band 1.jpeg">
-<img src="rubber band 2.jpeg">
-<img src="rubber band red 1.jpeg">
-<img src="rubber band red 2.jpeg">
-<img src="rubber band pair.jpeg">
-<h3>Rubber band</h3>
-<p class="price">₹79</p>
-<button class="btn" onclick="order('Rubber band')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="hair clip.jpeg">
-<img src="hair clip four piece.jpeg">
-<img src="hair clip four pair 1.jpeg">
-<img src="hair side clip.jpeg">
-<h3>Hair clip</h3>
-<p class="price">₹79</p>
-<button class="btn" onclick="order('Hair clip')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="hair band 1.jpeg">
-<img src="hair band 2.jpeg">
-<img src="hair band 3.jpeg">
-<h3>Hair band</h3>
-<p class="price">₹79</p>
-<button class="btn" onclick="order('Hair band')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="heart flower.jpeg">
-<h3>Crochet Heart pot</h3>
-<p class="price">₹119</p>
-<button class="btn" onclick="order('Crochet Heart pot')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="flower 2.jpeg">
-<img src="flower 3.jpeg">
-<h3>Too lip</h3>
-<p class="price">₹119</p>
-<button class="btn" onclick="order('Too lip')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="laddu gpal dress with cap.jpeg">
-<img src="laddu gopal dress with cap 1.jpeg">
-<h3>Laduu gopal dress with cap</h3>
-<p class="price">₹79 (Size 1 no)</p>
-<button class="btn" onclick="order('Laduu gopal dress with cap')">Order on WhatsApp</button>
-</div>
-
-
-<div class="card">
-<img src="flower 6.jpeg">
+<div class="price">₹299</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Rose">Order</a>
+</div><div class="product">
+<img src="images/rubber band 1.jpeg">
+<img src="images/rubber band 2.jpeg">
+<img src="images/rubber band red 1.jpeg">
+<img src="images/rubber band red 2.jpeg">
+<img src="images/rubber band pair.jpeg">
+<h3>Rubber Band</h3>
+<div class="price">₹79</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Rubber Band">Order</a>
+</div><div class="product">
+<img src="images/hair clip.jpeg">
+<img src="images/hair clip four piece.jpeg">
+<img src="images/hair clip four pair 1.jpeg">
+<img src="images/hair side clip.jpeg">
+<h3>Hair Clip</h3>
+<div class="price">₹79</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Hair Clip">Order</a>
+</div><div class="product">
+<img src="images/hair band 1.jpeg">
+<img src="images/hair band 2.jpeg">
+<img src="images/hair band 3.jpeg">
+<h3>Hair Band</h3>
+<div class="price">₹79</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Hair Band">Order</a>
+</div><div class="product">
+<img src="images/heart flower.jpeg">
+<h3>Crochet Heart Pot</h3>
+<div class="price">₹119</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Heart Pot">Order</a>
+</div><div class="product">
+<img src="images/flower 2.jpeg">
+<img src="images/Flower 3.jpeg">
+<h3>Too Lip</h3>
+<div class="price">₹119</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Too Lip">Order</a>
+</div><div class="product">
+<img src="images/laddu gopal dress with cap.jpeg">
+<img src="images/laddu gopal dress with cap 1.jpeg">
+<h3>Laddu Gopal Dress</h3>
+<div class="price">₹79</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Laddu Gopal Dress">Order</a>
+</div><div class="product">
+<img src="images/flower 6.jpeg">
 <h3>Small Rose</h3>
-<p class="price">₹149</p>
-<button class="btn" onclick="order('Small Rose')">Order on WhatsApp</button>
-</div>
-
-</div>
-
-
-<div class="payment">
-
-<h2>Payment</h2>
-
-<p>UPI ID: 7055487441-3@ibl</p>
-
-<p>Scan QR Code to Pay</p>
-
-<img src="qr png.png" width="250">
-
-</div>
-
-
-</body>
+<div class="price">₹149</div>
+<a class="btn" href="https://wa.me/918923122302?text=Order Small Rose">Order</a>
+</div></div></body>
 </html>
