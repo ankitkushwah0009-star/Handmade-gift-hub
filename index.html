@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Handmade Gift Hub</title>
+<title>Priya Enterprises</title>
 
 <style>
 
@@ -9,11 +9,17 @@ body{
 font-family:Arial;
 background:#f5f5f5;
 text-align:center;
+margin:0;
 }
 
-h1{
+header{
 background:#ff4d6d;
 color:white;
+padding:15px;
+}
+
+.info{
+background:white;
 padding:15px;
 }
 
@@ -36,7 +42,7 @@ box-shadow:0 0 10px rgba(0,0,0,0.2);
 .card img{
 width:100%;
 border-radius:10px;
-cursor:pointer;
+margin-top:5px;
 }
 
 .price{
@@ -52,11 +58,13 @@ padding:8px 15px;
 text-decoration:none;
 border-radius:5px;
 margin-top:5px;
+border:none;
 }
 
-select{
-padding:5px;
-margin-top:5px;
+.payment{
+background:white;
+padding:20px;
+margin:20px;
 }
 
 </style>
@@ -65,11 +73,9 @@ margin-top:5px;
 
 function order(product){
 
-var qty = document.getElementById(product+"qty").value;
+var message="Hello, mujhe "+product+" order karna hai";
 
-var message = "Hello, mujhe " + product + " ke " + qty + " piece chahiye";
-
-var url = "https://wa.me/918923122302?text=" + encodeURIComponent(message);
+var url="https://wa.me/918923122302?text="+encodeURIComponent(message);
 
 window.open(url);
 
@@ -81,159 +87,179 @@ window.open(url);
 
 <body>
 
-<h1>Handmade Gift Hub</h1>
+<header>
+<h1>Priya Enterprises</h1>
+</header>
+
+<div class="info">
+
+<p><b>Owner:</b> Priya , Ankit And Ambika</p>
+
+<p><b>Mobile:</b> 8923122302 , 9758025423 , 7599973339</p>
+
+<p><b>Address:</b> shop no 129 bhole baba homes near G R hospital samshabad road agra pin 282001</p>
+
+</div>
+
+<h2>Our Products</h2>
 
 <div class="gallery">
 
-<!-- Sunflower -->
 
 <div class="card">
-
-<a href="sunflower.jpeg" target="_blank">
-<img src="sunflower.jpeg">
-</a>
-
-<h3>Sunflower</h3>
-<p class="price">₹199</p>
-
-<select id="Sunflowerqty">
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>5</option>
-<option>10</option>
-</select>
-
-<br><br>
-
-<button class="btn" onclick="order('Sunflower')">
-Order on WhatsApp
-</button>
-
+<img src="1.jpeg">
+<h3>Flower stick</h3>
+<p class="price">₹99 per piece</p>
+<button class="btn" onclick="order('Flower stick')">Order on WhatsApp</button>
 </div>
 
 
-<!-- Hen -->
+<div class="card">
+<img src="flower 7.jpeg">
+<img src="flower 8.jpeg">
+<img src="five flower 2.jpeg">
+<img src="five flower.jpeg">
+<h3>Thai Rose</h3>
+<p class="price">₹249</p>
+<button class="btn" onclick="order('Thai Rose')">Order on WhatsApp</button>
+</div>
+
 
 <div class="card">
+<img src="flower roses pair.jpeg">
+<img src="flower pair.jpeg">
+<img src="seven roses pair.jpeg">
+<h3>Small Rose pair</h3>
+<p class="price">₹1199</p>
+<button class="btn" onclick="order('Small Rose pair')">Order on WhatsApp</button>
+</div>
 
-<a href="hen 1.jpeg" target="_blank">
+
+<div class="card">
 <img src="hen 1.jpeg">
 <img src="hen 2.jpeg">
-<img src="hen3.jpeg">
-</a>
-
+<img src="hen 3.jpeg">
 <h3>Hen</h3>
-<p class="price">₹250</p>
-
-<select id="Henqty">
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>5</option>
-<option>10</option>
-</select>
-
-<br><br>
-
-<button class="btn" onclick="order('Hen')">
-Order on WhatsApp
-</button>
-
+<p class="price">₹149</p>
+<button class="btn" onclick="order('Hen')">Order on WhatsApp</button>
 </div>
 
-
-<!-- Five Flower -->
 
 <div class="card">
-
-<a href="five flower.jpeg" target="_blank">
-<img src="five flower.jpeg">
-<img src="five flower 2.jpeg">
-</a>
-
-<h3>Five Flower</h3>
-<p class="price">₹1500</p>
-
-<select id="Five Flowerqty">
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>5</option>
-<option>10</option>
-</select>
-
-<br><br>
-
-<button class="btn" onclick="order('Five Flower')">
-Order on WhatsApp
-</button>
-
+<img src="sunflower 1.jpeg">
+<img src="sunflower 5 pair.jpeg">
+<img src="sunflower.jpeg">
+<h3>Sun flower</h3>
+<p class="price">₹199</p>
+<button class="btn" onclick="order('Sun flower')">Order on WhatsApp</button>
 </div>
 
-
-</div>
-
-<!-- hair clip -->
 
 <div class="card">
+<img src="turtiol.jpeg">
+<h3>Turtiol</h3>
+<p class="price">₹249</p>
+<button class="btn" onclick="order('Turtiol')">Order on WhatsApp</button>
+</div>
 
-<a href="hair clip.jpeg" target="_blank">
+
+<div class="card">
+<img src="lily.jpeg">
+<h3>Lilly</h3>
+<p class="price">₹149</p>
+<button class="btn" onclick="order('Lilly')">Order on WhatsApp</button>
+</div>
+
+
+<div class="card">
+<img src="flower 9.jpeg">
+<h3>Rose</h3>
+<p class="price">₹299</p>
+<button class="btn" onclick="order('Rose')">Order on WhatsApp</button>
+</div>
+
+
+<div class="card">
+<img src="rubber band 1.jpeg">
+<img src="rubber band 2.jpeg">
+<img src="rubber band red 1.jpeg">
+<img src="rubber band red 2.jpeg">
+<img src="rubber band pair.jpeg">
+<h3>Rubber band</h3>
+<p class="price">₹79</p>
+<button class="btn" onclick="order('Rubber band')">Order on WhatsApp</button>
+</div>
+
+
+<div class="card">
 <img src="hair clip.jpeg">
-<img src="hair clip four pair 1.jpeg">
 <img src="hair clip four piece.jpeg">
+<img src="hair clip four pair 1.jpeg">
 <img src="hair side clip.jpeg">
-</a>
-
 <h3>Hair clip</h3>
-<p class="price">₹80</p>
-
-<select id="Hair clipqty">
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>5</option>
-<option>10</option>
-</select>
-
-<br><br>
-
-<button class="btn" onclick="order('Hair Clip')">
-Order on WhatsApp
-</button>
-
+<p class="price">₹79</p>
+<button class="btn" onclick="order('Hair clip')">Order on WhatsApp</button>
 </div>
 
-
-</div>
-
-</body>
-</html>
-<!-- flower -->
 
 <div class="card">
+<img src="hair band 1.jpeg">
+<img src="hair band 2.jpeg">
+<img src="hair band 3.jpeg">
+<h3>Hair band</h3>
+<p class="price">₹79</p>
+<button class="btn" onclick="order('Hair band')">Order on WhatsApp</button>
+</div>
 
-<a href="easy rose.jpeg" target="_blank">
-<img src="flower 1.jpeg">
-<img src="flower.jpeg">
-</a>
 
-<h3>easy rose</h3>
-<p class="price">₹120</p>
+<div class="card">
+<img src="heart flower.jpeg">
+<h3>Crochet Heart pot</h3>
+<p class="price">₹119</p>
+<button class="btn" onclick="order('Crochet Heart pot')">Order on WhatsApp</button>
+</div>
 
-<select id="easy roseqty">
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>5</option>
-<option>10</option>
-</select>
 
-<br><br>
-</body>
-</html>
-<button class="btn" onclick="order('Sunflower')">
-Order on WhatsApp
-</button>
+<div class="card">
+<img src="flower 2.jpeg">
+<img src="flower 3.jpeg">
+<h3>Too lip</h3>
+<p class="price">₹119</p>
+<button class="btn" onclick="order('Too lip')">Order on WhatsApp</button>
+</div>
+
+
+<div class="card">
+<img src="laddu gopal dress with cap.jpeg">
+<img src="laddu gopal dress with cap 1.jpeg">
+<h3>Laduu gopal dress with cap</h3>
+<p class="price">₹79 (Size 1 no)</p>
+<button class="btn" onclick="order('Laduu gopal dress with cap')">Order on WhatsApp</button>
+</div>
+
+
+<div class="card">
+<img src="flower 6.jpeg">
+<h3>Small Rose</h3>
+<p class="price">₹149</p>
+<button class="btn" onclick="order('Small Rose')">Order on WhatsApp</button>
+</div>
 
 </div>
+
+
+<div class="payment">
+
+<h2>Payment</h2>
+
+<p>UPI ID: 7055487441-3@ibl</p>
+
+<p>Scan QR Code to Pay</p>
+
+<img src="qr.png" width="250">
+
+</div>
+
+
+</body>
+</html>
