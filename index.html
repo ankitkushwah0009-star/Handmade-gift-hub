@@ -1,17 +1,63 @@
 <!DOCTYPE html><html>
-<head>
-<meta name="google-site-verification" content="NbCzwf1nZzp9YdKqgLgZq3ki_r6xueKHum2bRPtJtq8" />
+<head><meta name="google-site-verification" content="NbCzwf1nZzp9YdKqgLgZq3ki_r6xueKHum2bRPtJtq8" />
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hand Made Gift Hub</title><style>
-body{font-family:Arial;margin:0;background:#f5f5f5;}
-header{background:#0f9d58;color:white;text-align:center;padding:20px;}
-.info{background:white;text-align:center;padding:15px;}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;padding:20px;}
-.product{background:white;padding:10px;border-radius:10px;box-shadow:0 0 8px rgba(0,0,0,0.1);text-align:center;}
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Hand Made Gift Hub</title><style>
 
-.slider{position:relative;height:200px;overflow:hidden;}
-.slider img{width:100%;height:200px;object-fit:cover;display:none;border-radius:8px;}
+body{font-family:Arial;margin:0;background:#f5f5f5;}
+
+header{
+background:#0f9d58;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.cart{
+position:fixed;
+top:10px;
+right:10px;
+background:#ff9800;
+color:white;
+padding:8px 12px;
+border-radius:6px;
+font-weight:bold;
+}
+
+.info{
+background:white;
+text-align:center;
+padding:15px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.product{
+background:white;
+padding:10px;
+border-radius:10px;
+box-shadow:0 0 8px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.slider{
+position:relative;
+height:200px;
+overflow:hidden;
+}
+
+.slider img{
+width:100%;
+height:200px;
+object-fit:cover;
+display:none;
+border-radius:8px;
+}
+
 .slider img.active{display:block;}
 
 .prev,.next{
@@ -37,6 +83,17 @@ padding:8px 12px;
 border-radius:5px;
 text-decoration:none;
 display:inline-block;
+margin:3px;
+}
+
+.cartbtn{
+background:#ff9800;
+color:white;
+padding:8px 12px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin:3px;
 }
 
 .payment{
@@ -44,164 +101,37 @@ background:white;
 text-align:center;
 padding:30px;
 }
-</style></head><body><header>
+
+</style></head><body><div class="cart">
+Cart: <span id="cartCount">0</span>
+</div><header>
 <h2>Hand Made Gift Hub</h2>
-</header><div class="info">
-Owner: Priya , Ankit , Ambika<br>
+</header><div class="info">Owner: Priya , Ankit , Ambika<br>
 Mobile: 8923122302 , 9758025423 , 7599973339<br>
 Address: shop no 129 bhole baba homes near G R hospital samshabad road agra pin 282001
-</div><div class="products"><!-- Product 1 --><div class="product">
-<div class="slider">
-<img src="1.jpeg" class="active">
-</div>
-<h3>Flower stick</h3>
-<div class="price">₹99</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Flower Stick">Order</a>
-</div><!-- Product 2 --><div class="product">
-<div class="slider">
-<img src="flower 7.jpeg" class="active">
-<img src="flower 8.jpeg">
-<img src="five flower  2.jpeg">
-<img src="five flower.jpeg">
-<button class="prev" onclick="moveSlide(this,-1)">‹</button>
-<button class="next" onclick="moveSlide(this,1)">›</button>
-</div>
-<h3>Thai Rose</h3>
-<div class="price">₹249</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Thai Rose">Order</a>
-</div><!-- Product 3 --><div class="product">
-<div class="slider">
-<img src="flower  roses pair.jpeg" class="active">
-<img src="flower pair.jpeg">
-<img src="seven roses pair.jpeg">
-<button class="prev" onclick="moveSlide(this,-1)">‹</button>
-<button class="next" onclick="moveSlide(this,1)">›</button>
-</div>
-<h3>Small Rose pair</h3>
-<div class="price">₹1199</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Small Rose pair">Order</a>
-</div><!-- Product 4 --><div class="product">
-<div class="slider">
-<img src="hen 1.jpeg" class="active">
-<img src="hen 2.jpeg">
-<img src="hen 3.jpeg">
-<button class="prev" onclick="moveSlide(this,-1)">‹</button>
-<button class="next" onclick="moveSlide(this,1)">›</button>
-</div>
-<h3>Hen</h3>
-<div class="price">₹149</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Hen">Order</a>
-</div><!-- Product 5 --><div class="product">
-<div class="slider">
-<img src="sunflower 1.jpeg" class="active">
-<img src="sunflower 5 pair.jpeg">
-<img src="sunflower.jpeg">
-<button class="prev" onclick="moveSlide(this,-1)">‹</button>
-<button class="next" onclick="moveSlide(this,1)">›</button>
-</div>
-<h3>Sun flower</h3>
-<div class="price">₹199</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Sun flower">Order</a>
-</div><!-- Product 6 --><div class="product">
-<div class="slider">
-<img src="turtiol.jpeg" class="active">
-</div>
-<h3>Turtiol</h3>
-<div class="price">₹249</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Turtiol">Order</a>
-</div><!-- Product 7 --><div class="product">
-<div class="slider">
-<img src="lily.jpeg" class="active">
-</div>
-<h3>Lilly</h3>
-<div class="price">₹149</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Lilly">Order</a>
-</div><!-- Product 8 --><div class="product">
-<div class="slider">
-<img src="flower 9.jpeg" class="active">
-</div>
-<h3>Rose</h3>
-<div class="price">₹299</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Rose">Order</a>
-</div><!-- Product 9 --><div class="product">
-<div class="slider">
-<img src="rubber band 1.jpeg" class="active">
-<img src="rubber band 2.jpeg">
-<img src="rubber band red 1.jpeg">
-<img src="rubber band red 2.jpeg">
-<img src="rubber band pair.jpeg">
-<button class="prev" onclick="moveSlide(this,-1)">‹</button>
-<button class="next" onclick="moveSlide(this,1)">›</button>
-</div>
-<h3>Rubber band</h3>
-<div class="price">₹79</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Rubber Band">Order</a>
-</div><!-- Product 10 --><div class="product">
-<div class="slider">
-<img src="hair clip.jpeg" class="active">
-<img src="hair clip four piece.jpeg">
-<img src="hair clip four pair 1.jpeg">
-<img src="hair side clip.jpeg">
-<button class="prev" onclick="moveSlide(this,-1)">‹</button>
-<button class="next" onclick="moveSlide(this,1)">›</button>
-</div>
-<h3>Hair clip</h3>
-<div class="price">₹79</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Hair Clip">Order</a>
-</div><!-- Product 11 --><div class="product">
-<div class="slider">
-<img src="hair band 1.jpeg" class="active">
-<img src="hair band 2.jpeg">
-<img src="hair band 3.jpeg">
-<button class="prev" onclick="moveSlide(this,-1)">‹</button>
-<button class="next" onclick="moveSlide(this,1)">›</button>
-</div>
-<h3>Hair band</h3>
-<div class="price">₹79</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Hair Band">Order</a>
-</div><!-- Product 12 --><div class="product">
-<div class="slider">
-<img src="heart flower.jpeg" class="active">
-</div>
-<h3>Crochet Heart pot</h3>
-<div class="price">₹119</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Crochet Heart Pot">Order</a>
-</div><!-- Product 13 --><div class="product">
-<div class="slider">
-<img src="flower 2.jpeg" class="active">
-<img src="Flower 3.jpeg">
-<button class="prev" onclick="moveSlide(this,-1)">‹</button>
-<button class="next" onclick="moveSlide(this,1)">›</button>
-</div>
-<h3>Too lip</h3>
-<div class="price">₹119</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Too Lip">Order</a>
-</div><!-- Product 14 --><div class="product">
-<div class="slider">
-<img src="laddu gopal dress with cap.jpeg" class="active">
-<img src="laddu gopal dress with cap 1.jpeg">
-<button class="prev" onclick="moveSlide(this,-1)">‹</button>
-<button class="next" onclick="moveSlide(this,1)">›</button>
-</div>
-<h3>Laduu gopal dress with cap</h3>
-<div class="price">₹79</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Ladu Gopal Dress">Order</a>
-</div><!-- Product 15 --><div class="product">
-<div class="slider">
-<img src="flower 6.jpeg" class="active">
-</div>
-<h3>Small Rose</h3>
-<div class="price">₹149</div>
-<a class="btn" href="https://wa.me/918923122302?text=Order Small Rose">Order</a>
-</div></div><div class="payment">
-<h3>UPI Payment</h3>
-<p>UPI ID: 7055487441-3@ibl</p>
-<p>Scan QR Code to Pay</p>
-<img src="qr.png" width="200">
-</div><script>
+
+</div><div class="products"><!-- PRODUCT EXAMPLE --><div class="product"><div class="slider"><img src="1.jpeg" class="active"></div><h3>Flower Stick</h3><div class="price">₹99</div><button class="cartbtn" onclick="addCart()">Add to Cart</button>
+
+<a class="btn" href="https://wa.me/918923122302?text=Order Flower Stick">
+Order
+</a></div></div><div class="payment"><h3>UPI Payment</h3><p>UPI ID: 7055487441-3@ibl</p><p>Scan QR Code to Pay</p><img src="qr.png" width="200"></div><script>
+
+let cart=0;
+
+function addCart(){
+
+cart++;
+
+document.getElementById("cartCount").innerText=cart;
+
+}
+
 function moveSlide(btn,dir){
+
 let slider=btn.parentElement;
+
 let imgs=slider.querySelectorAll("img");
+
 let index=0;
 
 imgs.forEach((img,i)=>{
@@ -215,6 +145,8 @@ if(index<0) index=imgs.length-1;
 if(index>=imgs.length) index=0;
 
 imgs[index].classList.add("active");
+
 }
+
 </script></body>
 </html>
